@@ -7,7 +7,7 @@ class YearCounter
     private $years = [];
 
     /*
-     * SE CARGA EL ARRAY CON LOS DATOS A CALCULARA
+     * THE ARRAY IS LOADED WITH THE DATA TO CALCULATE
      */
     public function __construct($years)
     {
@@ -15,7 +15,7 @@ class YearCounter
     }
 
     /**
-     * GENERA EL RANGO DE AÑOS
+     * GENERATES THE RANGE OF YEARS
      */
     function ranges()
     {
@@ -26,7 +26,8 @@ class YearCounter
     }
 
     /*
-     * CUENTA LAS VECES QUE APARECE CADA AÑO
+     *
+COUNT ON THE TIMES THAT APPEAR EVERY YEAR
      */
     function counter($range)
     {
@@ -38,11 +39,11 @@ class YearCounter
     }
 
     /*
-     * IMPRIME LOS RESULTADOS EN PANTALLA
+     *        PRINT SCREEN RESULTS
      */
     function result()
     {
-        echo '<p>Los años con más personas vivas fueron: </p>';
+        echo '<p>The years with more people alive were: </p>';
 
         echo '<pre>';
         foreach (array_keys($this->count, max($this->count)) as $d) {
@@ -50,7 +51,7 @@ class YearCounter
         }
         echo '</pre>';
 
-        echo "<p>con un cantidad de: <strong>" .  max($this->count) . "</strong> personas </p>";
+        echo "<p>with a quantity of: <strong>" .  max($this->count) . "</strong> people </p>";
     }
 }
 
